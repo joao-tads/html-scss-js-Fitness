@@ -61,6 +61,42 @@ html {
 body {
   background: $bg-color;
 }
+
+section {
+  padding: 3rem 1rem;
+}
+
+.link-btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: $orange;
+  color: $white;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+
+  &:hover {
+    background: $white;
+    color: $orange;
+  }
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  span {
+    font-size: 2.5rem;
+    color: $orange;
+  }
+
+  h3 {
+    @include title-text(3.5rem);
+  }
+}
+
 /* =========== HEADER =========== */
 .header {
   z-index: 1000;
@@ -110,9 +146,131 @@ body {
     color: $white;
   }
 }
+
+/* =========== HOME =========== */
+.home {
+  background: url(../img/home-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  span {
+    font-size: 2.5rem;
+    color: $orange;
+  }
+
+  h3 {
+    @include title-text(5rem);
+    padding-top: 1rem;
+  }
+}
+
 /* =========== ABOUT =========== */
+.about {
+  span {
+    font-size: 2.5rem;
+    color: $orange;
+  }
+
+  h3 {
+    @include title-text(2.7rem);
+    padding: 1rem 0;
+  }
+
+  p {
+    @include graph-text(1.5rem);
+    padding: 1rem 0;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      padding-top: 1.5rem;
+      @include title-text(1.7rem);
+
+      i {
+        padding: 1rem;
+        color: $orange;
+      }
+    }
+  }
+}
+
+/* =========== COUNTER =========== */
+.counter {
+  background: url(../img/counter-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .box-container {
+    @include grid(25rem);
+
+    .box {
+      text-align: center;
+
+      h3 {
+        font-size: 5rem;
+        color: $orange;
+      }
+
+      p {
+        @include title-text(2rem);
+      }
+    }
+  }
+}
 
 /* =========== COURSES =========== */
+.courses {
+  .box-container {
+    @include grid(30rem);
+
+    .box {
+      border: $border;
+
+      &:hover .image img {
+        transform: scale(1.1);
+      }
+
+      .image {
+        height: 25rem;
+        overflow: hidden;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .content {
+        padding: 2rem;
+
+        .icons {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-bottom: 1rem;
+
+          span {
+            @include title-text(1.7rem);
+
+            i {
+              color: $orange;
+              padding-right: 0.5rem;
+            }
+          }
+        }
+
+        h3 {
+          @include title-text(2.7rem);
+          padding: 0.5rem 0;
+        }
+      }
+    }
+  }
+}
 
 /* =========== PRICING =========== */
 
@@ -125,6 +283,10 @@ body {
 @media (max-width: 991px) {
   html {
     font-size: 55%;
+  }
+
+  .home h3 {
+    font-size: 3rem;
   }
 }
 
@@ -172,8 +334,4 @@ body {
   html {
     font-size: 50%;
   }
-}
-
-body {
-  height: 300rem;
 }

@@ -34,6 +34,40 @@ body {
   background: #1d0e15;
 }
 
+section {
+  padding: 3rem 1rem;
+}
+
+.link-btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: #ff5421;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+.link-btn:hover {
+  background: #fff;
+  color: #ff5421;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.heading span {
+  font-size: 2.5rem;
+  color: #ff5421;
+}
+.heading h3 {
+  font-size: 3.5rem;
+  text-transform: capitalize;
+  color: #fff;
+}
+
 /* =========== HEADER =========== */
 .header {
   z-index: 1000;
@@ -75,8 +109,125 @@ body {
   color: #fff;
 }
 
+/* =========== HOME =========== */
+.home {
+  background: url(../img/home-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.home span {
+  font-size: 2.5rem;
+  color: #ff5421;
+}
+.home h3 {
+  font-size: 5rem;
+  text-transform: capitalize;
+  color: #fff;
+  padding-top: 1rem;
+}
+
 /* =========== ABOUT =========== */
+.about span {
+  font-size: 2.5rem;
+  color: #ff5421;
+}
+.about h3 {
+  font-size: 2.7rem;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 1rem 0;
+}
+.about p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #ccc;
+  padding: 1rem 0;
+}
+.about ul {
+  list-style: none;
+}
+.about ul li {
+  padding-top: 1.5rem;
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  color: #fff;
+}
+.about ul li i {
+  padding: 1rem;
+  color: #ff5421;
+}
+
+/* =========== COUNTER =========== */
+.counter {
+  background: url(../img/counter-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.counter .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+.counter .box-container .box {
+  text-align: center;
+}
+.counter .box-container .box h3 {
+  font-size: 5rem;
+  color: #ff5421;
+}
+.counter .box-container .box p {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #fff;
+}
+
 /* =========== COURSES =========== */
+.courses .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+.courses .box-container .box {
+  border: 0.1rem solid rgba(255, 255, 255, 0.2);
+}
+.courses .box-container .box:hover .image img {
+  transform: scale(1.1);
+}
+.courses .box-container .box .image {
+  height: 25rem;
+  overflow: hidden;
+}
+.courses .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.courses .box-container .box .content {
+  padding: 2rem;
+}
+.courses .box-container .box .content .icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+.courses .box-container .box .content .icons span {
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  color: #fff;
+}
+.courses .box-container .box .content .icons span i {
+  color: #ff5421;
+  padding-right: 0.5rem;
+}
+.courses .box-container .box .content h3 {
+  font-size: 2.7rem;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 0.5rem 0;
+}
+
 /* =========== PRICING =========== */
 /* =========== TEAM =========== */
 /* =========== BLOGS =========== */
@@ -85,6 +236,10 @@ body {
 @media (max-width: 991px) {
   html {
     font-size: 55%;
+  }
+
+  .home h3 {
+    font-size: 3rem;
   }
 }
 /* ----- screen 768px Tablet ----- */
@@ -124,9 +279,6 @@ body {
   html {
     font-size: 50%;
   }
-}
-body {
-  height: 300rem;
 }
 
 /*# sourceMappingURL=style.css.map */
